@@ -1,14 +1,28 @@
 var wget = require('../lib/wget');
+var expect = require('chai').expect;
+var express = require('express');
+var app = express();
 
-var download = wget.download('https://raw.github.com/Fyrd/caniuse/master/data.json', '/tmp/README.md');
-// with a proxy:
-// var download = wget.download('https://raw.github.com/Fyrd/caniuse/master/data.json', '/tmp/README.md', {proxy: 'http://proxyhost:port'});
-download.on('error', function(err) {
-    console.log(err);
+before(function() {
+    app.get('/', function (req, res) {
+        res.download(__dirname + '/data/' + 'sample.json');
+    });
+
+    var server = app.listen(3000, function () {
+        var host = server.address().address;
+        var port = server.address().port;
+    });
 });
-download.on('end', function(output) {
-    console.log(output);
-});
-download.on('progress', function(progress) {
-    console.log(progress);
+
+describe('request', function() {
+    it('should be able to perform a get request', function() {
+        var download = wget.download('http://127.0.0.1:3000/', '/tmp/test.json');
+        download.on('progress', function(progress) {
+            console.log(progress);
+        });
+
+        download.on('error', function(err) {
+            console.log(err);
+        })
+    });
 });

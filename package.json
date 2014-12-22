@@ -1,21 +1,35 @@
 {
-    "name": "wget-improved",
-    "version": "1.0.1",
-    "description": "wget in nodejs, forked from wget to add improvements and help maintain the project",
-    "keywords": ["download", "http", "https", "ftp", "proxy", "wget"],
-    "author": "Michael Barajas <michael.a.barajas@gmail.com>",
-    "repository":{
-        "type": "git",
-        "url": "git://github.com/bearjaws/node-wget.git"
-    },
-    "contributors": [
-        {
-            "name": "Michael Barajas"
-        }
-    ],
-    "homepage": "https://github.com/bearjaws/wget-improved",
-    "dependencies": {
-        "tunnel": "0.0.2"
-    },
-    "engines": { "node": ">= 0.6.18" }
+  "name": "wget-improved",
+  "version": "1.0.1",
+  "description": "wget in nodejs, forked from wget to add improvements and help maintain the project",
+  "keywords": [
+    "download",
+    "http",
+    "https",
+    "ftp",
+    "proxy",
+    "wget"
+  ],
+  "author": "Michael Barajas <michael.a.barajas@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bearjaws/node-wget.git"
+  },
+  "contributors": [
+    {
+      "name": "Michael Barajas"
+    }
+  ],
+  "homepage": "https://github.com/bearjaws/wget-improved",
+  "dependencies": {
+    "express": "4.10.6",
+    "tunnel": "0.0.2"
+  },
+  "devDependencies": {
+    "chai": "1.9.1",
+    "mocha": ""
+  },
+  "engines": {
+    "node": ">= 0.6.18"
+  }
 }
