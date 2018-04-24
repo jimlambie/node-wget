@@ -1,5 +1,5 @@
 {
-    "name": "wget-improved",
+    "name": "@dadi/wget",
     "version": "1.4.0",
     "description": "wget in nodejs, forked from wuchengwei/node-wget to add improvements and help maintain the project",
     "keywords": ["download", "http", "https", "ftp", "proxy", "wget"],
