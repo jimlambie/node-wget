@@ -1,6 +1,6 @@
 {
     "name": "@dadi/wget",
-    "version": "1.4.1",
+    "version": "1.4.2",
     "description": "wget in nodejs, forked from wuchengwei/node-wget to add improvements and help maintain the project",
     "keywords": [
         "download",
